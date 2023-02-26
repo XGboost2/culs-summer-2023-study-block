@@ -1,0 +1,35 @@
+Question: step by step instruction to create a web application in janet
+
+
+Answers: Janet is a programming language that can be used to create web applications. Here are the steps to create a simple web application using Janet:
+
+Install Janet: First, you need to install Janet on your computer. You can download the latest version of Janet from the official website: https://janet-lang.org/
+
+Install the HTTP server module: To create a web application in Janet, you will need to use an HTTP server module. Janet has several HTTP server modules available, including Janet-serve and Janet-http. You can install the Janet-serve module using the following command:
+
+javascript
+Copy code
+sudo jpm install https://github.com/janet-lang/janet-serve
+Create a new Janet file: Open your favorite text editor and create a new file with a .janet extension. This file will contain the code for your web application.
+
+Import the Janet-serve module: In your Janet file, import the Janet-serve module using the following code:
+
+python
+Copy code
+(import serve)
+Define a route: Next, you need to define a route for your web application. A route is a URL path that the user can visit to see a particular page. Here's an example route that responds with a "Hello, World!" message:
+bash
+Copy code
+(defroutes app-routes
+  ["hello"]
+  (serve/response "Hello, World!"))
+Start the server: Finally, you can start the HTTP server by calling the serve/start function with your route definition:
+bash
+Copy code
+(serve/start app-routes {:port 8000})
+This will start the HTTP server on port 8000. Now you can visit http://localhost:8000/hello in your web browser to see the "Hello, World!" message.
+
+Of course, this is just a very basic example. To create a more complex web application, you'll need to learn more about Janet and its HTTP server modules. But hopefully, this gives you a good starting point!
+
+
+
